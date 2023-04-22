@@ -1,0 +1,10 @@
+
+[requires]
+catch2/3.3.2
+
+[generators]
+CMakeToolchain
+CMakeDeps
+
+[layout]
+cmake_layout
