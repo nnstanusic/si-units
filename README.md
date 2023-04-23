@@ -13,8 +13,10 @@ Here's an example of how to use the library to calculate the velocity of an obje
 
 int main() {
   using namespace si::literals;
+
+  constexpr auto mass = si::kilo_gram{50.0f};
   constexpr auto distance = m;  // 1 si::meter constant
-  constexpr auto time = 10.0_s;  //10 si::seconds literal
+  constexpr auto time = 10.0_s; //10 si::seconds literal
   auto velocity = distance / time;  // si::meters_per_seconds is automaticaly infereda
   std::cout << "Velocity: " << velocity.value << " m/s\n";
   std::cout << "Velocity: " << static_cast<float>(velocity) << " m/s\n";
