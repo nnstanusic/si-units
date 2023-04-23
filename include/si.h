@@ -125,7 +125,7 @@ namespace si
 	template <details::unit_descriptor descriptor>
 	struct unit
 	{
-		using base = unit<descriptor>;
+		using base_t = unit<descriptor>;
 		float value;
 
 		static consteval auto Descriptor()

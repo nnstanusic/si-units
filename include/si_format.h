@@ -30,7 +30,7 @@ namespace si{
 
 	
 	template<class T, class CharT>
-		requires std::derived_from<T, typename T::base>
+		requires std::derived_from<T, typename T::base_t>
 	struct std::formatter<T, CharT> : std::formatter<unit<T::Descriptor()>, CharT> {};
 
 	/*template<class CharT >
