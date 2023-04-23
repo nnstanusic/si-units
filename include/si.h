@@ -236,21 +236,21 @@ namespace si
 	struct SquareMeters : unit<details::squared_meter_desc> {};
 	struct CubicMeters : unit<details::cubic_meter_desc> {};
 
-	struct Hertz : unit<details::hertz_desc> {};
-	struct Newton : unit<details::newton_desc> {};
-	struct Pascal : unit<details::pascal_desc> {};
-	struct Joule : unit<details::joule_desc> {};
-	struct Watt : unit<details::watt_desc> {};
-	struct Coulomb : unit<details::coulomb_desc> {};
-	struct Volt : unit<details::volt_desc> {};
-	struct Farad : unit<details::farad_desc> {};
-	struct Ohm : unit<details::ohm_desc> {};
-	struct Siemens : unit<details::siemens_desc> {};
-	struct Weber : unit<details::weber_desc> {};
-	struct Tesla : unit<details::tesla_desc> {};
-	struct Henry : unit<details::henry_desc> {};
-	struct Lux : unit<details::lux_desc> {};
-	struct Katal : unit<details::katal_desc> {};
+	struct hertz : unit<details::hertz_desc> {};
+	struct newton : unit<details::newton_desc> {};
+	struct pascal : unit<details::pascal_desc> {};
+	struct joule : unit<details::joule_desc> {};
+	struct watt : unit<details::watt_desc> {};
+	struct coulomb : unit<details::coulomb_desc> {};
+	struct volt : unit<details::volt_desc> {};
+	struct farad : unit<details::farad_desc> {};
+	struct ohm : unit<details::ohm_desc> {};
+	struct siemens : unit<details::siemens_desc> {};
+	struct weber : unit<details::weber_desc> {};
+	struct tesla : unit<details::tesla_desc> {};
+	struct henry : unit<details::henry_desc> {};
+	struct lux : unit<details::lux_desc> {};
+	struct katal : unit<details::katal_desc> {};
 
 	namespace details
 	{
@@ -266,7 +266,7 @@ namespace si
 		template <> struct inferer<gram::Descriptor()> { using type = gram; };
 
 		template <> struct inferer<kilo_meter::Descriptor()> { using type = kilo_meter; };
-		template <> struct inferer<kilo_second::Descriptor()> { using type = kilo_second;};
+		template <> struct inferer<kilo_second::Descriptor()> { using type = kilo_second; };
 		template <> struct inferer<kilo_mols::Descriptor()> { using type = kilo_mols; };
 		template <> struct inferer<kilo_ampere::Descriptor()> { using type = kilo_ampere; };
 		template <> struct inferer<kilo_kelvin::Descriptor()> { using type = kilo_kelvin; };
@@ -287,21 +287,21 @@ namespace si
 		template <> struct inferer<MetersPerSecondSquared::Descriptor()> { using type = MetersPerSecondSquared; };
 		template <> struct inferer<SquareMeters::Descriptor()> { using type = SquareMeters; };
 		template <> struct inferer<CubicMeters::Descriptor()> { using type = CubicMeters; };
-		template <> struct inferer<Hertz::Descriptor()> { using type = Hertz; };
-		template <> struct inferer<Newton::Descriptor()> { using type = Newton; };
-		template <> struct inferer<Pascal::Descriptor()> { using type = Pascal; };
-		template <> struct inferer<Joule::Descriptor()> { using type = Joule; };
-		template <> struct inferer<Watt::Descriptor()> { using type = Watt; };
-		template <> struct inferer<Coulomb::Descriptor()> { using type = Coulomb; };
-		template <> struct inferer<Volt::Descriptor()> { using type = Volt; };
-		template <> struct inferer<Farad::Descriptor()> { using type = Farad; };
-		template <> struct inferer<Ohm::Descriptor()> { using type = Ohm; };
-		template <> struct inferer<Siemens::Descriptor()> { using type = Siemens; };
-		template <> struct inferer<Weber::Descriptor()> { using type = Weber; };
-		template <> struct inferer<Tesla::Descriptor()> { using type = Tesla; };
-		template <> struct inferer<Henry::Descriptor()> { using type = Henry; };
-		template <> struct inferer<Lux::Descriptor()> { using type = Lux; };
-		template <> struct inferer<Katal::Descriptor()> { using type = Katal; };
+		template <> struct inferer<hertz::Descriptor()> { using type = hertz; };
+		template <> struct inferer<newton::Descriptor()> { using type = newton; };
+		template <> struct inferer<pascal::Descriptor()> { using type = pascal; };
+		template <> struct inferer<joule::Descriptor()> { using type = joule; };
+		template <> struct inferer<watt::Descriptor()> { using type = watt; };
+		template <> struct inferer<coulomb::Descriptor()> { using type = coulomb; };
+		template <> struct inferer<volt::Descriptor()> { using type = volt; };
+		template <> struct inferer<farad::Descriptor()> { using type = farad; };
+		template <> struct inferer<ohm::Descriptor()> { using type = ohm; };
+		template <> struct inferer<siemens::Descriptor()> { using type = siemens; };
+		template <> struct inferer<weber::Descriptor()> { using type = weber; };
+		template <> struct inferer<tesla::Descriptor()> { using type = tesla; };
+		template <> struct inferer<henry::Descriptor()> { using type = henry; };
+		template <> struct inferer<lux::Descriptor()> { using type = lux; };
+		template <> struct inferer<katal::Descriptor()> { using type = katal; };
 
 		template <unit_descriptor d>
 		using inferer_t = typename inferer<d>::type;
