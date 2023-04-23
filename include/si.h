@@ -352,6 +352,8 @@ namespace si
 		constexpr auto K = kelvin{ 1 };
 		constexpr auto cd = candela{ 1 };
 		constexpr auto g = gram{ 1 };
+		constexpr auto kg = kilo_gram{ 1 };
+		constexpr auto t = ton{ 1 };
 
 		constexpr auto operator""_m(long double x) { return x * m; };
 		constexpr auto operator""_s(long double x) { return x * s; };
@@ -359,7 +361,9 @@ namespace si
 		constexpr auto operator""_A(long double x) { return x * A; };
 		constexpr auto operator""_K(long double x) { return x * K; };
 		constexpr auto operator""_cd(long double x) { return x * cd; };
-		constexpr auto operator""_kg(long double x) { return x * g; };
+		constexpr auto operator""_g(long double x) { return x * g; };
+		constexpr auto operator""_kg(long double x) { return x * kg; };
+		constexpr auto operator""_t(long double x) { return x * t; };
 	}
 
 }
