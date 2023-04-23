@@ -17,6 +17,7 @@ namespace si
 			LuminousIntensity,
 			Mass
 		};
+
 		using exponent_array = std::array<int, 7>;
 
 		struct unit_descriptor
@@ -124,6 +125,7 @@ namespace si
 	template <details::unit_descriptor descriptor>
 	struct unit
 	{
+		using base = unit<descriptor>;
 		float value;
 
 		static consteval auto Descriptor()

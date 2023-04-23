@@ -3,6 +3,7 @@
 #include <format>
 
 namespace si{
+
 	template<details::unit_descriptor d, class CharT>
 	struct std::formatter<si::unit<d>, CharT> : std::formatter<std::string, CharT>
 	{
@@ -26,5 +27,13 @@ namespace si{
 			return std::formatter<std::string, CharT>::format(output, fc);
 		}
 	};
+
+	
+	template<class T, class CharT>
+		requires std::derived_from<T, typename T::base>
+	struct std::formatter<T, CharT> : std::formatter<unit<T::Descriptor()>, CharT> {};
+
+	/*template<class CharT >
+	typename derived_formater<si::meter, CharT>;*/
 
 }
