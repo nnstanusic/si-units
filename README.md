@@ -1,6 +1,12 @@
 # SI Units Library
 This is a C++23 library for working with SI units.
 
+## Features
+
+ *  All calculation are possible during the compile step
+ *  Dissallows some operations on different types `+ and -`, allows for generation of new types `* and /`
+ *  Some newly generated types can be infered e.g `si::meter / si::second / si::second * si::kilo_gram -> si::newton`
+
 ## Installation
 To use this library, simply download the header files and include them in your C++ project. You can then use the classes and functions provided in the library to perform calculations with SI units.
 

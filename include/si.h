@@ -91,7 +91,7 @@ namespace si
 		constexpr auto ampere_desc = unit_descriptor{ .exponent = ampere_expo, .factor = 1.0f };
 		constexpr auto kelvin_desc = unit_descriptor{ .exponent = kelvin_expo, .factor = 1.0f };
 		constexpr auto candela_desc = unit_descriptor{ .exponent = candela_expo, .factor = 1.0f };
-		constexpr auto gram_desc = unit_descriptor{ .exponent = gram_expo, .factor = 1000.0f };
+		constexpr auto gram_desc = unit_descriptor{ .exponent = gram_expo, .factor = 0.001f };
 
 		constexpr auto squared_meter_desc = unit_descriptor{ .exponent = meter_expo ^ 2, .factor = 1.0f };
 		constexpr auto cubic_meter_desc = unit_descriptor{ .exponent = meter_expo ^ 3, .factor = 1.0f };
