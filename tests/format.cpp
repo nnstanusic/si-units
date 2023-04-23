@@ -1,8 +1,5 @@
-#include "si.h"
+#include "si_format.h"
 #include <catch2/catch_test_macros.hpp>
-
-#include <format>
-
 
 TEST_CASE("Format meter", "[Operations]") {    
     auto length = si::meter{ 25.0f }  / si::ampere{3.5};
