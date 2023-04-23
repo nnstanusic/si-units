@@ -6,6 +6,7 @@ add_executable(unit_tests)
 target_sources(unit_tests PRIVATE 
 	operations.cpp
 	conversions.cpp
+	format.cpp
 )
 
 

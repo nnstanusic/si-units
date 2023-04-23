@@ -17,10 +17,8 @@ TEST_CASE("Addition", "[Operations]") {
 }
 
 
-TEST_CASE("Subtraction", "[Operations]") {
-
+TEST_CASE("Subtraction", "[Operations]") {    
     auto length = si::meter{ 250.0f } - si::meter{ 250.0f };
-
+    
     REQUIRE(length.value == 0.0f);
 }
-

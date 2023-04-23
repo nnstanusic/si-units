@@ -26,6 +26,7 @@ int main() {
   auto velocity = distance / time;  // si::meters_per_seconds is automatically inferred
   std::cout << "Velocity: " << velocity.value << " m/s\n";
   std::cout << "Velocity: " << static_cast<float>(velocity) << " m/s\n";
+  std::cout << std::format("Velocity: {}\n", velocity); // >> 0.1 m s^-1
   return 0;
 }
 
@@ -34,7 +35,7 @@ int main() {
 ## Classes
 The library provides the following classes for working with SI units:
 
-* `si::meter`
+* `si::meter``
 * `si::kilogram`
 * `si::second`
 * `si::ampere`
