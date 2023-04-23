@@ -149,6 +149,10 @@ namespace si
 			return v;
 		}
 
+		[[nodiscard]] explicit constexpr operator float() const {
+			return this->value;
+		};
+
 		template <details::unit_descriptor d_other>
 			requires same_exponent_c<descriptor, d_other>
 		[[nodiscard]] constexpr auto operator-(this auto v, unit<d_other> other)
