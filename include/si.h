@@ -226,8 +226,8 @@ namespace si
 	template<class T> struct day : unit<T, details::second_desc * 60 * 60 * 24> {};
 
 	//compount 
-	template<class T> struct MetersPerSecond : unit<T, details::velocity_desc> {};
-	template<class T> struct MetersPerSecondSquared : unit<T, details::acceleration_desc> {};
+	template<class T> struct meters_per_second : unit<T, details::velocity_desc> {};
+	template<class T> struct meters_per_second_squared : unit<T, details::acceleration_desc> {};
 
 	template<class T> struct SquareMeters : unit<T, details::squared_meter_desc> {};
 	template<class T> struct CubicMeters : unit<T, details::cubic_meter_desc> {};
@@ -273,8 +273,8 @@ namespace si
 	template<class T> minute(T val) -> minute<T>;
 	template<class T> hour(T val) -> hour<T>;
 	template<class T> day(T val) -> day<T>;
-	template<class T> MetersPerSecond(T val) -> MetersPerSecond<T>;
-	template<class T> MetersPerSecondSquared(T val) -> MetersPerSecondSquared<T>;
+	template<class T> meters_per_second(T val) -> meters_per_second<T>;
+	template<class T> meters_per_second_squared(T val) -> meters_per_second_squared<T>;
 	template<class T> SquareMeters(T val) -> SquareMeters<T>;
 	template<class T> CubicMeters(T val) -> CubicMeters<T>;
 	template<class T> hertz(T val) -> hertz<T>;
@@ -325,8 +325,8 @@ namespace si
 		template <class T> struct inferer<T, ton<float>::Descriptor()> { using type = ton<T>; };
 
 		template <class T> struct inferer < T, unit_descriptor{ .exponent = {0, 0, 0, 0, 0, 0, 0}, .factor = 1.0f } > { using type = float; };
-		template <class T> struct inferer<T, MetersPerSecond<float>::Descriptor()> { using type = MetersPerSecond<T>; };
-		template <class T> struct inferer<T, MetersPerSecondSquared<float>::Descriptor()> { using type = MetersPerSecondSquared<T>; };
+		template <class T> struct inferer<T, meters_per_second<float>::Descriptor()> { using type = meters_per_second<T>; };
+		template <class T> struct inferer<T, meters_per_second_squared<float>::Descriptor()> { using type = meters_per_second_squared<T>; };
 		template <class T> struct inferer<T, SquareMeters<float>::Descriptor()> { using type = SquareMeters<T>; };
 		template <class T> struct inferer<T, CubicMeters<float>::Descriptor()> { using type = CubicMeters<T>; };
 		template <class T> struct inferer<T, hertz<float>::Descriptor()> { using type = hertz<T>; };

@@ -3,7 +3,7 @@
 
 TEST_CASE("Kilometer to meter", "[Conversions]") {
 
-    auto length = si::kilo(si::meter<float>{ 500.0f});
+    auto length = si::kilo(si::meter{ 500.0f});
 
     REQUIRE(static_cast<float>(length) == 0.5f);
 
@@ -16,11 +16,11 @@ TEST_CASE("minute to second", "[Conversions]") {
     
     
 
-    constexpr auto ct_seconds = si::second<float>{ 0.0f } + si::minute<float>{ 1.0f };
+    constexpr auto ct_seconds = si::second{ 0.0f } + si::minute{ 1.0f };
     static_assert(ct_seconds.value == 60.0f, "Minutes not converting to seconds as expected");
-    auto min = si::minute<float>{ 1.0f };
+    auto min = si::minute{ 1.0f };
     
-    auto seconds = si::second<float>{ 0.0f } + min;
+    auto seconds = si::second{ 0.0f } + min;
     REQUIRE(seconds.value == 60.0f);
 }
 
@@ -28,7 +28,7 @@ TEST_CASE("minute to second", "[Conversions]") {
 TEST_CASE("Generating newtons", "[Conversions]") {
     using namespace si::literals;
 
-    constexpr auto force = m / s / s * si::kilo_gram<float>{ 1.0f };
+    constexpr auto force = m / s / s * si::kilo_gram{ 1.0f };
 
     using newton = std::remove_cv_t<decltype(force)>;
 
