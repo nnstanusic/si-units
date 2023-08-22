@@ -115,7 +115,7 @@ namespace si
 	struct unit
 	{
 		using base_t = unit<T, descriptor>;
-
+		using type = T;
 		T value;
 
 		static consteval auto Descriptor()
