@@ -8,7 +8,7 @@ This is a C++23 library for working with SI units.
  *  Some newly generated types can be infered e.g `si::meter / si::second / si::second * si::kilo_gram -> si::newton`
 
 ## Installation
-To use this library, simply download the header files and include them in your C++ project. You can then use the classes and functions provided in the library to perform calculations with SI units.
+To use this library, simply download the header files and include them in your C++ project.
 
 ## Usage
 Here's an example of how to use the library to calculate the velocity of an object:
