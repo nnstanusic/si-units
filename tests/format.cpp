@@ -42,9 +42,9 @@ TEMPLATE_LIST_TEST_CASE("Base formats", "[Format]", base_units)
 
 
 TEST_CASE("Base format test", "[Format]") {
-    auto length = si::meter{ 25.0f }  / si::ampere{3.5f};
+    auto length = si::meter{ 25.0 }  / si::ampere{3.50}; 
 
-    auto x = std::format("{}", length);
+    auto x = std::format("{:.2f}", length);
 
-    REQUIRE(x == "7.142857 m A^-1");
+    REQUIRE(x == "7.14m A^-1");
 }
