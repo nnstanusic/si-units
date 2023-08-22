@@ -25,7 +25,7 @@ int main() {
   constexpr auto time = 10.0_s; //10 si::seconds literal
   auto velocity = distance / time; 
 
-  static_assert(std::same_as_v<decltype(veclocity), si::meters_per_second<float>>, "Types are not equal");
+  static_assert(std::same_as<decltype(veclocity), si::meters_per_second<float>>, "Types are not equal");
   std::cout << "Velocity: " << velocity.value << " m/s\n";
   std::cout << "Velocity: " << static_cast<float>(velocity) << " m/s\n";
   std::cout << std::format("Velocity: {}\n", velocity); // >> 0.1 m s^-1
