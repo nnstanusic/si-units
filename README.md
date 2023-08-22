@@ -20,10 +20,10 @@ Here's an example of how to use the library to calculate the velocity of an obje
 int main() {
   using namespace si::literals;
 
-  constexpr auto mass = si::kilo_gram{50.0f};
+  constexpr auto mass = si::kilo_gram{50}; //si::kilo_gram<int>
   constexpr auto distance = m;  // 1 si::meter constant
   constexpr auto time = 10.0_s; //10 si::seconds literal
-  auto velocity = distance / time;  // si::meters_per_seconds is automatically inferred
+  auto velocity = distance / time;  // decltype(velocity) -> si::meters_per_seconds
   std::cout << "Velocity: " << velocity.value << " m/s\n";
   std::cout << "Velocity: " << static_cast<float>(velocity) << " m/s\n";
   std::cout << std::format("Velocity: {}\n", velocity); // >> 0.1 m s^-1
@@ -35,16 +35,31 @@ int main() {
 ## Classes
 The library provides the following classes for working with SI units:
 
-* `si::meter``
-* `si::kilogram`
-* `si::second`
-* `si::ampere`
-* `si::kelvin`
-* `si::mol`
-* `si::candela`
 
-In addition, the library provides a number of derived units, such as:
+|  base       | kilo             | mega             | time       | compound                  |
+|-------------|------------------|------------------|------------|---------------------------|
+| si::meter   | si::kilo_meter   | si::mega_meter   | si::minute | si::MetersPerSecond       |
+| si::second  | si::kilo_second  | si::mega_second  | si::hour   | si:MetersPerSecondSquared |
+| si::mols    | si::kilo_mols    | si::mega_mols    | si::day    | si::SquareMeters          |
+| si::ampere  | si::kilo_ampere  | si::mega_ampere  |            | si::CubicMeters           |
+| si::kelvin  | si::kilo_kelvin  | si::mega_kelvin  |            | si::hertz                 |
+| si::candela | si::kilo_candela | si::mega_candela |            | si::newton                |
+| si::gram    | si::kilo_gram    | ton              |            | si::pascal                |
+|             |                  |                  |            | si::joule                 |
+|             |                  |                  |            | si::watt                  |
+|             |                  |                  |            | si::coulomb               |
+|             |                  |                  |            | si::volt                  |
+|             |                  |                  |            | si::farad                 |
+|             |                  |                  |            | si::ohm                   |
+|             |                  |                  |            | si::siemens               |
+|             |                  |                  |            | si::weber                 |
+|             |                  |                  |            | si::tesla                 |
+|             |                  |                  |            | si::henry                 |
+|             |                  |                  |            | si::lux                   |
+|             |                  |                  |            | si::katal                 |
 
-* `si::newton (force)`
-* `si::joule (energy)`
-* `si::watt (power)`
+## Literals
+														
+## Custom types
+
+## Custom auto infer addition

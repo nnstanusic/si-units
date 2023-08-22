@@ -3,7 +3,7 @@
 
 TEST_CASE("Kilometer to meter", "[Conversions]") {
 
-    auto length = si::kilo(si::meter<float>{ 500.0f });
+    auto length = si::kilo(si::meter<float>{ 500.0f});
 
     REQUIRE(static_cast<float>(length) == 0.5f);
 

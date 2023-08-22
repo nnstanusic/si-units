@@ -248,6 +248,52 @@ namespace si
 	template<class T> struct lux : unit<T, details::lux_desc> {};
 	template<class T> struct katal : unit<T, details::katal_desc> {};
 
+#pragma region Deduction Guidelines
+	template<class T> meter(T val) -> meter<T>;
+	template<class T> second(T val) -> second<T>;
+	template<class T> mols(T val) -> mols<T>;
+	template<class T> ampere(T val) -> ampere<T>;
+	template<class T> kelvin(T val) -> kelvin<T>;
+	template<class T> candela(T val) -> candela<T>;
+	template<class T> gram(T val) -> gram<T>;
+	template<class T> kilo_meter(T val) -> kilo_meter<T>;
+	template<class T> kilo_second(T val) -> kilo_second<T>;
+	template<class T> kilo_mols(T val) -> kilo_mols<T>;
+	template<class T> kilo_ampere(T val) -> kilo_ampere<T>;
+	template<class T> kilo_kelvin(T val) -> kilo_kelvin<T>;
+	template<class T> kilo_candela(T val) -> kilo_candela<T>;
+	template<class T> kilo_gram(T val) -> kilo_gram<T>;
+	template<class T> mega_meter(T val) -> mega_meter<T>;
+	template<class T> mega_second(T val) -> mega_second<T>;
+	template<class T> mega_mols(T val) -> mega_mols<T>;
+	template<class T> mega_ampere(T val) -> mega_ampere<T>;
+	template<class T> mega_kelvin(T val) -> mega_kelvin<T>;
+	template<class T> mega_candela(T val) -> mega_candela<T>;
+	template<class T> ton(T val) -> ton<T>;
+	template<class T> minute(T val) -> minute<T>;
+	template<class T> hour(T val) -> hour<T>;
+	template<class T> day(T val) -> day<T>;
+	template<class T> MetersPerSecond(T val) -> MetersPerSecond<T>;
+	template<class T> MetersPerSecondSquared(T val) -> MetersPerSecondSquared<T>;
+	template<class T> SquareMeters(T val) -> SquareMeters<T>;
+	template<class T> CubicMeters(T val) -> CubicMeters<T>;
+	template<class T> hertz(T val) -> hertz<T>;
+	template<class T> newton(T val) -> newton<T>;
+	template<class T> pascal(T val) -> pascal<T>;
+	template<class T> joule(T val) -> joule<T>;
+	template<class T> watt(T val) -> watt<T>;
+	template<class T> coulomb(T val) -> coulomb<T>;
+	template<class T> volt(T val) -> volt<T>;
+	template<class T> farad(T val) -> farad<T>;
+	template<class T> ohm(T val) -> ohm<T>;
+	template<class T> siemens(T val) -> siemens<T>;
+	template<class T> weber(T val) -> weber<T>;
+	template<class T> tesla(T val) -> tesla<T>;
+	template<class T> henry(T val) -> henry<T>;
+	template<class T> lux(T val) -> lux<T>;
+	template<class T> katal(T val) -> katal<T>;
+#pragma endregion Deduction Guidelines
+
 	namespace details
 	{
 
