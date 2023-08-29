@@ -16,6 +16,8 @@ Here's an example of how to use the library to calculate the velocity of an obje
 ```c++
 
 #include "si.h"
+#include "si_literals.h"
+#include "si_format.h"
 
 int main() {
   using namespace si::literals;
