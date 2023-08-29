@@ -1,4 +1,6 @@
 #include "si.h"
+#include "si_literals.h"
+
 #include <catch2/catch_test_macros.hpp>
 
 TEST_CASE("Kilometer to meter", "[Conversions]") {

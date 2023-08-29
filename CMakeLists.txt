@@ -6,6 +6,7 @@ add_library(SI INTERFACE)
 
 target_sources(SI INTERFACE 
 	include/si.h
+	include/si_literals.h
 	include/si_format.h
 	)
 target_include_directories(SI INTERFACE include)
